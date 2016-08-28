@@ -1,0 +1,15 @@
+<div class="container">
+
+    <div class="jumbotron">
+
+        <p id="myContent"></p>
+
+
+    </div>
+
+    <input type="text" #box id="inputBox" class="form-control" placeholder="type here..." (keyup)="parseString(box.value, $event); colorLetter($event)">
+
+    <button class="btn btn-primary" (click)="testMe()">sdfsdf</button>
+
+
+</div>
