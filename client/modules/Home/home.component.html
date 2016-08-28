@@ -1,15 +1,61 @@
+
+
 <div class="container">
+    <div class="image-container">
+        <img class="img-responsive" src="assets/img/logo.png">
+    </div>
+<br/><br/>
 
-    <div class="jumbotron">
+    <div class="whole-container text-center center-block">
 
-        <p id="myContent"></p>
 
+        <div class="row">
+            <div class="col-md-12">
+                <span class="myTimer">Timer: <div class="ui blue circular label">{{globalTimer}}</div></span>
+                <span class="myWPM">       WPM: <div class="ui blue circular label">{{WPM}}</div></span>
+            </div>
+        </div>
+        <div class="ui raised very padded text container segment">
+            <h2 id="myContent" class="ui header"></h2>
+        </div>
+
+        <br/>
+        <label *ngIf="startButton" class="ui red label">The Game will start in {{gameTimer}}</label>
+        <br/><br/>
+        <div [ngClass]=" wrongText ? 'form-group has-error' : 'nothing'">
+            <input [disabled]="!startButton" type="text" #box id="inputBox" class="form-control error" placeholder="type here..." (keyup)="parseString(box.value, $event); colorLetter($event)">
+        </div>
+
+        <br/>
+
+            <button class="btn btn-primary btn-block" (click)="startTest()">Start</button>
 
     </div>
 
-    <input type="text" #box id="inputBox" class="form-control" placeholder="type here..." (keyup)="parseString(box.value, $event); colorLetter($event)">
-
-    <button class="btn btn-primary" (click)="testMe()">sdfsdf</button>
-
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">-->
+
+    <!--<div class="jumbotron">-->
+        <!--<p id="myContent"></p>-->
+    <!--</div>-->
+
+    <!--<input [disabled]="true" type="text" #box id="inputBox" class="form-control" placeholder="type here..." (keyup)="parseString(box.value, $event); colorLetter($event)">-->
+<!--<br/>-->
+    <!--<button class="btn btn-primary btn-block" (click)="startTest()">Start</button>-->
+
+
+<!--</div>-->

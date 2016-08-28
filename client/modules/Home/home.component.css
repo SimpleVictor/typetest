@@ -1,0 +1,22 @@
+.image-container >  img{
+    margin: auto !important;
+    max-width: 40%;
+}
+
+.whole-container{
+    text-align: center;
+}
+
+.ui.text.container{
+    max-width: 100% !important;
+}
+
+.myTimer{
+    text-align: left;
+    float: left;
+}
+
+.myWPM{
+    text-align: left;
+    float: left;
+}
